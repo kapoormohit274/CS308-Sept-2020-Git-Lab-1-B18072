@@ -14,11 +14,11 @@ int main(int argc, char* argv[]) {
 	if(input < 0){
 		double complex no = input + 0.0;
 		double complex sqt = csqrt(no);
-		printf("NEGSUPPORT: %.2f + %.2fi\n", creal(sqt), cimag(sqt));
+		printf("DEBUG: %.2f + %.2fi\n", creal(sqt), cimag(sqt));
 	}
 	else {
-		printf("NEGSUPPORT: Sqrt of %d is: %f\n",input,sqrt(input));
-		printf("NEGSUPPORT: End of program. Exiting.");
+		printf("DEBUG: Sqrt of %d is: %f\n",input,sqrt(input));
+		printf("DEBUG: End of program. Exiting.");
 	}
 	return(0);
 
