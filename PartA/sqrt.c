@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <complex.h>
 
 int main(int argc, char* argv[]) {
 	
@@ -11,12 +12,14 @@ int main(int argc, char* argv[]) {
 
 	int input = atoi(argv[1]);	
 	if(input < 0){
-		printf("Not a valid number");
-		exit(-1);
+		double complex no = input + 0.0;
+		double complex sqt = csqrt(no);
+		printf("%.2f + %.2fi\n", creal(sqt), cimag(sqt));
 	}
-
-	printf("Sqrt of %d is %f\n",input,sqrt(input));
-	printf("End of program. Exiting.");
+	else {
+		printf("Sqrt of %d is: %f\n",input,sqrt(input));
+		printf("End of program. Exiting.");
+	}
 	return(0);
 
 } // end main
